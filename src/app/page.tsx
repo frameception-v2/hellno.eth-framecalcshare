@@ -2,7 +2,9 @@ import { Metadata } from "next";
 import App from "./app";
 import { PROJECT_TITLE, PROJECT_DESCRIPTION } from "~/lib/constants";
 
-const appUrl = process.env.NEXT_PUBLIC_URL;
+const appUrl =
+  process.env.NEXT_PUBLIC_URL ||
+  `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
 
 const frame = {
   version: "next",
